@@ -16,11 +16,11 @@ int main()
 		std::string password = "knight";
 		DatabaseConnManager::SetGameDsn(dsn, user, password);
 
-		SqlBuilder<Item> filter = SqlBuilder<Item>();
+		SqlBuilder<Item> filter {};
 		filter.SetSelectColumns({ "Num", "strName" });
 
 		// using an iterator
-		ModelRecordSet<Item> recordSet = ModelRecordSet<Item>(filter);
+		ModelRecordSet<Item> recordSet(filter);
 		int i = 0;
 		while (recordSet.next() && i < 10)
 		{

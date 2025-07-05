@@ -23,7 +23,7 @@ public:
 	/// \note this currently acts as an iterator and is not efficient
 	/// \see ModelRecordSet for efficient iterator implementation until this is done correctly
 	template <typename T>
-	static std::vector<T> BatchSelect(SqlBuilder<T> sql = SqlBuilder<T>()) noexcept(false)
+	static std::vector<T> BatchSelect(SqlBuilder<T>& sql) noexcept(false)
 	{
 		std::string query = sql.SelectString();
 
@@ -42,13 +42,26 @@ public:
 		{
 			T res {};
 			Model::BindResult(result, res, bindingsIndex);
-			resultModels.push_back(std::move(res));
+			resultModels.push_back(
+				std::move(res));
 		}
 
 		stmt.close();
 		conn.disconnect();
 
 		return resultModels;
+	}
+
+	/// \brief uses a SqlBuilder to select a batch of data in a single trip to the database
+	///
+	/// \note this currently acts as an iterator and is not efficient
+	/// \see ModelRecordSet for efficient iterator implementation until this is done correctly
+	template <typename T>
+	static std::vector<T> BatchSelect() noexcept(false)
+	{
+		SqlBuilder<Item> filter {};
+		return std::move(
+			BatchSelect(filter));
 	}
 
 	/// \brief attempts to bind a result row to a given model class's members

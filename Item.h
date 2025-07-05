@@ -1,7 +1,7 @@
 ﻿#pragma once
 
-#include <map>
-#include <set>
+#include <unordered_map>
+#include <unordered_set>
 #include <string>
 
 #include "nanodbc/nanodbc.h"
@@ -12,8 +12,7 @@ class Item
 public:
 	// static bindings
 	typedef void (*ItemBindingFunction)(Item& m, const nanodbc::result& result, short colIndex);
-	static std::map<std::string, ItemBindingFunction> ColumnBindings;
-
+	static std::unordered_map<std::string, ItemBindingFunction> ColumnBindings;
 
 	/// \brief jsonSchema column description
 	int         Num;
@@ -26,19 +25,6 @@ public:
 	{
 		// generate with a default val by type to avoid pulling garbage from memory
 		Num = 0;
-		Name = "";
-	}
-
-	/// \brief initiates the 
-	/// \note this would be called via a generated method that calls it for each model
-	static void InitBindings()
-	{
-		if (!isBindInit)
-		{
-			ColumnBindings[std::string("Num")] = Item::BindNum;
-			ColumnBindings[std::string("strName")] = Item::BindName;
-			isBindInit = true;
-		}
 	}
 
 	/// \brief table name
@@ -47,10 +33,10 @@ public:
 		return "ITEM";
 	}
 
-	/// \brief returns a constant reference to the std::set of column names
+	/// \brief returns a constant reference to the std::unordered_set of column names
 	///
 	/// \note this set should not be manipulated
-	static const std::set<std::string>& ColumnNames()
+	static const std::unordered_set<std::string>& ColumnNames()
 	{
 		return columnNames;
 	}
@@ -74,6 +60,13 @@ public:
 	}
 
 private:
-	static std::set<std::string> columnNames;
-	static bool isBindInit;
+	static std::unordered_set<std::string> columnNames;
 };
+
+std::unordered_map<std::string, Item::ItemBindingFunction> Item::ColumnBindings =
+{
+	{ "Num", &Item::BindNum },
+	{ "strName", &Item::BindName }
+};
+
+std::unordered_set<std::string> Item::columnNames = { "Num", "strName" };

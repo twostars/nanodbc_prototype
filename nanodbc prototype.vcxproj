@@ -159,7 +159,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="nanodbc_prototype.cpp" />
   </ItemGroup>
   <ItemGroup>

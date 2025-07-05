@@ -16,10 +16,6 @@ int main()
 		std::string password = "knight";
 		DatabaseConnManager::SetGameDsn(dsn, user, password);
 
-		// we'll have a generated method that wraps all model bindings for a single
-		// call on application startup
-		Item::InitBindings();
-
 		SqlBuilder<Item> filter = SqlBuilder<Item>();
 		filter.SetSelectColumns({ "Num", "strName" });
 

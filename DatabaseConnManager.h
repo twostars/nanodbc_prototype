@@ -4,6 +4,7 @@
 
 #include "nanodbc/nanodbc.h"
 
+/// \brief manages connections to the database via nanODBC
 namespace DatabaseConnManager
 {
     // private namespace to prevent direct access of static variables
@@ -22,7 +23,9 @@ namespace DatabaseConnManager
         std::string LOG_DSN_PASS;
     }
     
-    // Get a connection to the database using the code-generated DbType enum.  Can throw an exception
+    /// \brief attempt a connection to the database using the code-generated DbType enum
+    /// \throws std::runtime_error
+    /// \throws nanodbc::database_error
     static nanodbc::connection GetConnectionTo(const std::string& databaseType) noexcept(false)
     {
         if (databaseType == "ACCOUNT")
@@ -40,7 +43,8 @@ namespace DatabaseConnManager
         
         throw std::runtime_error("Invalid database type");
     }
-    
+
+    /// \brief sets connection information to the ACCOUNT database
     static void SetAccountDsn(const std::string& dsnName, const std::string& user, const std::string& pass)
     {
         ACCOUNT_DSN_NAME = dsnName;
@@ -48,6 +52,7 @@ namespace DatabaseConnManager
         ACCOUNT_DSN_PASS = pass;
     }
 
+    /// \brief sets connection information to the GAME database
     static void SetGameDsn(const std::string& dsnName, const std::string& user, const std::string& pass)
     {
         GAME_DSN_NAME = dsnName;
@@ -55,6 +60,7 @@ namespace DatabaseConnManager
         GAME_DSN_PASS = pass;
     }
 
+    /// \brief sets connection information to the LOG database
     static void SetLogDsn(const std::string& dsnName, const std::string& user, const std::string& pass)
     {
         LOG_DSN_NAME = dsnName;

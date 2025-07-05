@@ -6,11 +6,18 @@
 #include "SqlBuilder.h"
 #include "nanodbc/nanodbc.h"
 
-// Model implements common underlying members and functions needed to support database operations
+/// \brief acts as an identifying base class for generated model classes and contains
+/// static binding and SQL operations.  Should never have non-static methods/members
+/// to maintain a minimal footprint
 class Model
 {
     // Mostly hand-coded template with some possible generated functions/properties.
 public:
+    /// \brief uses a SqlBuilder to select a batch of data in a single trip to the database
+    ///
+    /// \param sql SqlBuilder used to modify the select query
+    /// \note this currently acts as an iterator and is not efficient
+    /// \see ModelRecordSet for efficient iterator implementation until this is done correctly
     template <typename T>
     static std::vector<T> BatchSelect(SqlBuilder<T> sql = SqlBuilder<T>()) noexcept(false)
     {
@@ -34,31 +41,21 @@ public:
         return resultModels;
     }
 
+    /// \brief attempts to bind a result row to a given model class's members
     template <typename T>
     static void BindResult(const nanodbc::result& result, T& model)
     {
         for (short i = 0; i < result.columns(); i++)
         {
-            try
+            auto bind = T::ColumnBindings[result.column_name(i)];
+            if (bind == nullptr)
             {
-                auto bind = T::ColumnBindings[result.column_name(i)];
-                if (bind != nullptr)
-                {
-                    std::invoke(bind, model, result, i);
-                }
-                else
-                {
-                    std::cout << "WARN: No binding found for:" << T::TableName() << "." << result.column_name(i) << "\n";
-                }
-            }
-            catch (std::out_of_range& ex)
-            {
+                // TODO: logger impl
                 std::cout << "WARN: No binding found for:" << T::TableName() << "." << result.column_name(i) << "\n";
+                continue;
             }
-            catch (std::exception& ex2)
-            {
-                std::cout << ex2.what() << "\n";
-            }
+            
+            std::invoke(bind, model, result, i);
         }
     }
 };

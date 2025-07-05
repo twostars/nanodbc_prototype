@@ -1,0 +1,6 @@
+﻿.idea
+.vs
+
+nanodbc .*
+x64
+x86

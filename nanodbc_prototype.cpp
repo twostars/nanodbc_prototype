@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 
 #include "DatabaseConnManager.h"
@@ -9,41 +9,41 @@
 
 int main()
 {
-    try
-    {
-        std::string dsn = "KN_online";
-        std::string user = "knight";
-        std::string password = "knight";
-        DatabaseConnManager::SetGameDsn(dsn, user, password);
+	try
+	{
+		std::string dsn = "KN_online";
+		std::string user = "knight";
+		std::string password = "knight";
+		DatabaseConnManager::SetGameDsn(dsn, user, password);
 
-        // we'll have a generated method that wraps all model bindings for a single
-        // call on application startup
-        Item::InitBindings();
+		// we'll have a generated method that wraps all model bindings for a single
+		// call on application startup
+		Item::InitBindings();
 
-        SqlBuilder<Item> filter = SqlBuilder<Item>();
-        filter.SetSelectColumns({"Num", "strName"});
+		SqlBuilder<Item> filter = SqlBuilder<Item>();
+		filter.SetSelectColumns({ "Num", "strName" });
 
-        // using an iterator
-        ModelRecordSet<Item> recordSet = ModelRecordSet<Item>(filter);
-        int i = 0;
-        while (recordSet.next() && i < 10)
-        {
-            Item item = recordSet.get();
-            std::cout << item.Num << ": " << item.Name << "\n";
-            i++;
-        }
+		// using an iterator
+		ModelRecordSet<Item> recordSet = ModelRecordSet<Item>(filter);
+		int i = 0;
+		while (recordSet.next() && i < 10)
+		{
+			Item item = recordSet.get();
+			std::cout << item.Num << ": " << item.Name << "\n";
+			i++;
+		}
 
-        // loading results in a single query; currently this functions the same way as the iterator above
-        // need to look more at nanodbc library functions to see if there's a way to fetch everything
-        // in one database trip or not
-        std::vector<Item> results = Model::BatchSelect<Item>(filter);
-        for (std::size_t ix = 0; ix < results.size() && ix < 10; ix++)
-        {
-            std::cout << results.at(ix).Num << ": " << results.at(ix).Name << "\n";
-        }
-    }
-    catch (nanodbc::database_error& ex)
-    {
-        std::cerr << ex.what() << "\n";
-    }
+		// loading results in a single query; currently this functions the same way as the iterator above
+		// need to look more at nanodbc library functions to see if there's a way to fetch everything
+		// in one database trip or not
+		std::vector<Item> results = Model::BatchSelect<Item>(filter);
+		for (std::size_t ix = 0; ix < results.size() && ix < 10; ix++)
+		{
+			std::cout << results.at(ix).Num << ": " << results.at(ix).Name << "\n";
+		}
+	}
+	catch (nanodbc::database_error& ex)
+	{
+		std::cerr << ex.what() << "\n";
+	}
 }

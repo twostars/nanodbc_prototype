@@ -56,9 +56,6 @@ public:
 				std::move(res));
 		}
 
-		stmt.close();
-		conn.disconnect();
-
 		return resultModels;
 	}
 

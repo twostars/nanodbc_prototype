@@ -5,16 +5,19 @@
 #include <iostream>
 #include <vector>
 
+/// \brief Used to create safe T-SQL statements for database model objects
 template <typename model>
 class SqlBuilder
 {
 public:
+    /// \brief returns a select query string based on any configured modifiers
     std::string SelectString()
     {
         std::string query = "SELECT ";
         if (selectCols.empty())
         {
-            query += "*";
+            // fill with all supported model bindings as a default
+            fillSelectColumns();
         }
         
         short i = 0;
@@ -34,14 +37,32 @@ public:
         return query;
     }
     
-    // Query filtering stuff
-    void SetSelectColumns(const std::vector<std::string> columns)
+    /// \brief sets the columns for a select statement to a subset of bindable values
+    ///
+    /// \param columns list of columns to select
+    /// \warning if an input column is not valid for binding it will be ignored and
+    /// a warn message will be logged
+    void SetSelectColumns(const std::vector<std::string>& columns)
     {
         selectCols.clear();
-        selectCols.insert(columns.begin(), columns.end());
+        for (const std::string& col : columns)
+        {
+            if (!isValidColumnName(col))
+            {
+                // TODO:  Logger mechanism
+                std::cout << "WARN: Invalid column name: " << col << "for table " << model::TableName() << "\n";
+                continue;
+            }
+            
+            selectCols.insert(col);
+        }
+        
     }
 
-    void ExcludeColumns(const std::vector<std::string> columns)
+    /// \brief excludes a list of columns from the current binding set
+    ///
+    /// \param columns list of columns to exclude from the query
+    void ExcludeColumns(const std::vector<std::string>& columns)
     {
         // if selectColumns hasn't been populated, assume the default of SELECT * and filter from that
         if (selectCols.empty())
@@ -51,7 +72,10 @@ public:
 
         for (std::size_t i = 0; i < columns.size(); i++)
         {
-            selectCols.erase(columns.at(i));
+            if (selectCols.contains(columns.at(i)))
+            {
+                selectCols.erase(columns.at(i));
+            }
         }
     }
 
@@ -60,13 +84,15 @@ private:
     // we use an std::set to prevent duplicate column entries
     std::set<std::string> selectCols;
 
-    // fillSelectColumns gets the associated model's column vector and converts it to a set
+    bool isValidColumnName(const std::string& colName)
+    {
+        return model::ColumnNames().contains(colName);
+    }
+
+    /// \brief sets selectedCols to the model's supported column set
     void fillSelectColumns()
     {
-        const std::vector<std::string> cols = model::ColumnNames();
-        for (std::size_t i = 0; i < cols.size(); i++)
-        {
-            selectCols.insert(cols[i]);
-        }
+        selectCols.clear();
+        selectCols.insert(model::ColumnNames().begin(), model::ColumnNames().end());
     }
 };

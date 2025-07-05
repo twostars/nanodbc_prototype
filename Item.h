@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include <map>
+#include <set>
 #include <string>
 
 #include "nanodbc/nanodbc.h"
@@ -11,6 +12,7 @@ public:
     // static bindings
     typedef void (*ItemBindingFunction)(Item& m, const nanodbc::result& result, short colIndex);
     static std::map<std::string, ItemBindingFunction> ColumnBindings;
+    
     
     // Generated Properties
     int         Num;
@@ -37,9 +39,9 @@ public:
         return "ITEM";
     }
 
-    static std::vector<std::string> ColumnNames()
+    static const std::set<std::string>& ColumnNames()
     {
-        return std::vector<std::string>{"Num", "strName"};
+        return columnNames;
     }
 
     static std::string DbType()
@@ -57,4 +59,7 @@ public:
     {
         m.Name = result.get<std::string>(colIndex);
     }
+    
+private:
+    static std::set<std::string> columnNames;
 };

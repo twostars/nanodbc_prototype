@@ -170,12 +170,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="nanodbc_prototype.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DatabaseConnManager.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemBinder.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="ModelRecordSet.h" />
     <ClInclude Include="SqlBuilder.h" />

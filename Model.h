@@ -15,7 +15,7 @@ class Model
 	// Mostly hand-coded template with some possible generated functions/properties.
 public:
 	template <typename T>
-	using BindingIndex = std::vector<typename T::BindColumnFunction_t>;
+	using BindingIndex = std::vector<typename T::BinderType::BindColumnFunction_t>;
 
 	/// \brief uses a SqlBuilder to select a batch of data in a single trip to the database
 	///
@@ -90,7 +90,9 @@ public:
 	template <typename T>
 	static void IndexColumnNameBindings(const nanodbc::result& result, BindingIndex<T>& bindingsIndex)
 	{
-		const auto& columnBindingsMap = T::ColumnBindings;
+		using BinderType = typename T::BinderType;
+
+		const auto& columnBindingsMap = BinderType::GetColumnBindings();
 		std::string columnName;
 
 		bindingsIndex.reserve(result.columns());

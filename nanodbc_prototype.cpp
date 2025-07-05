@@ -3,6 +3,7 @@
 
 #include "DatabaseConnManager.h"
 #include "Item.h"
+#include "ItemBinder.h"
 #include "ModelRecordSet.h"
 #include "SqlBuilder.h"
 #include "nanodbc/nanodbc.h"

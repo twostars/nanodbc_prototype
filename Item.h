@@ -28,9 +28,9 @@ public:
 	}
 
 	/// \brief table name
-	static std::string TableName()
+	static const std::string& TableName()
 	{
-		return "ITEM";
+		return tableName;
 	}
 
 	/// \brief returns a constant reference to the std::unordered_set of column names
@@ -42,9 +42,9 @@ public:
 	}
 
 	/// \brief database type for the model
-	static std::string DbType()
+	static const std::string& DbType()
 	{
-		return "GAME";
+		return dbType;
 	}
 
 	/// \brief Generated binding function for Num
@@ -60,6 +60,8 @@ public:
 	}
 
 private:
+	static std::string tableName;
+	static std::string dbType;
 	static std::unordered_set<std::string> columnNames;
 };
 
@@ -68,5 +70,8 @@ std::unordered_map<std::string, Item::BindColumnFunction_t> Item::ColumnBindings
 	{ "Num", &Item::BindNum },
 	{ "strName", &Item::BindName }
 };
+
+std::string Item::tableName = "ITEM";
+std::string Item::dbType = "GAME";
 
 std::unordered_set<std::string> Item::columnNames = { "Num", "strName" };

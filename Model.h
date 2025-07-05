@@ -29,7 +29,7 @@ public:
 
 		std::string query = sql.SelectCountString();
 
-		nanodbc::statement stmt(conn, query);
+		nanodbc::statement stmt = nanodbc::statement(conn, query);
 		nanodbc::result result = nanodbc::execute(stmt);
 		int64_t rowCount = 0;
 

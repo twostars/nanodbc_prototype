@@ -11,8 +11,8 @@ class Item
 {
 public:
 	// static bindings
-	typedef void (*ItemBindingFunction)(Item& m, const nanodbc::result& result, short colIndex);
-	static std::unordered_map<std::string, ItemBindingFunction> ColumnBindings;
+	typedef void (*BindColumnFunction_t)(Item& m, const nanodbc::result& result, short colIndex);
+	static std::unordered_map<std::string, BindColumnFunction_t> ColumnBindings;
 
 	/// \brief jsonSchema column description
 	int         Num;
@@ -63,7 +63,7 @@ private:
 	static std::unordered_set<std::string> columnNames;
 };
 
-std::unordered_map<std::string, Item::ItemBindingFunction> Item::ColumnBindings =
+std::unordered_map<std::string, Item::BindColumnFunction_t> Item::ColumnBindings =
 {
 	{ "Num", &Item::BindNum },
 	{ "strName", &Item::BindName }

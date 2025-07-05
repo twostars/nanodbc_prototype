@@ -23,6 +23,8 @@ public:
 		std::string query = filterObj.SelectString();
 		stmt = nanodbc::statement(conn, query);
 		result = nanodbc::execute(stmt);
+
+		Model::IndexColumnNameBindings<T>(result, bindingIndex);
 	}
 
 	~ModelRecordSet()
@@ -41,8 +43,8 @@ public:
 	/// \brief binds the current result record to an associated model object and returns it
 	T get()
 	{
-		T model = T();
-		Model::BindResult(result, model);
+		T model {};
+		Model::BindResult(result, model, bindingIndex);
 		return model;
 	}
 
@@ -58,4 +60,5 @@ private:
 	nanodbc::connection conn;
 	nanodbc::statement stmt;
 	nanodbc::result result;
+	Model::BindingIndex<T> bindingIndex;
 };

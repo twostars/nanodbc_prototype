@@ -37,6 +37,14 @@ public:
 		return query;
 	}
 
+	/// \brief returns a select (row) count query string based on any configured modifiers
+	std::string SelectCountString()
+	{
+		std::string query = "SELECT COUNT(*) FROM [" + model::TableName() + ']';
+		std::cout << "using query: " << query << '\n';
+		return query;
+	}
+
 	/// \brief sets the columns for a select statement to a subset of bindable values
 	///
 	/// \param columns list of columns to select

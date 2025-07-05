@@ -25,17 +25,27 @@ public:
 	template <typename T>
 	static std::vector<T> BatchSelect(SqlBuilder<T>& sql) noexcept(false)
 	{
-		std::string query = sql.SelectString();
+		nanodbc::connection conn(DatabaseConnManager::GetConnectionTo(T::DbType()));
 
-		nanodbc::connection conn = DatabaseConnManager::GetConnectionTo(T::DbType());
-		nanodbc::statement stmt = nanodbc::statement(conn, query);
+		std::string query = sql.SelectCountString();
 
+		nanodbc::statement stmt(conn, query);
 		nanodbc::result result = nanodbc::execute(stmt);
+		int64_t rowCount = 0;
+
+		if (result.next())
+			rowCount = result.get<int64_t>(0);
+
+		query = sql.SelectString();
+		stmt = nanodbc::statement(conn, query);
+		result = nanodbc::execute(stmt);
 
 		BindingIndex<T> bindingsIndex;
 		IndexColumnNameBindings<T>(result, bindingsIndex);
 
 		std::vector<T> resultModels;
+		if (rowCount > 0)
+			resultModels.reserve(static_cast<size_t>(rowCount));
 
 		// result always starts before the first row, so calling next will not skip the first result.
 		while (result.next())

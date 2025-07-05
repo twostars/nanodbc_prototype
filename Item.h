@@ -12,17 +12,11 @@ public:
 	using BinderType = ItemBinder;
 
 	/// \brief jsonSchema column description
-	int         Num;
+	int         Num = 0;
 
 	/// \brief jsonSchema column description
 	/// \note maxLength: jsonSchema.column.length
 	std::string Name;
-
-	Item()
-	{
-		// generate with a default val by type to avoid pulling garbage from memory
-		Num = 0;
-	}
 
 	/// \brief table name
 	static const std::string& TableName()

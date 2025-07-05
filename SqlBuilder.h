@@ -70,12 +70,9 @@ public:
 			fillSelectColumns();
 		}
 
-		for (std::size_t i = 0; i < columns.size(); i++)
+		for (const std::string& columnName : columns)
 		{
-			if (selectCols.contains(columns.at(i)))
-			{
-				selectCols.erase(columns.at(i));
-			}
+			selectCols.erase(columnName);
 		}
 	}
 

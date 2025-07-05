@@ -4,7 +4,10 @@
 #include <unordered_set>
 #include <string>
 
-#include "nanodbc/nanodbc.h"
+namespace nanodbc
+{
+	class result;
+}
 
 /// \brief jsonSchema table description
 class Item
@@ -48,30 +51,13 @@ public:
 	}
 
 	/// \brief Generated binding function for Num
-	static void BindNum(Item& m, const nanodbc::result& result, short colIndex)
-	{
-		result.get_ref<int>(colIndex, m.Num);
-	}
+	static void BindNum(Item& m, const nanodbc::result& result, short colIndex);
 
-	/// \brief Generated binding function for Name
-	static void BindName(Item& m, const nanodbc::result& result, short colIndex)
-	{
-		result.get_ref<std::string>(colIndex, m.Name);
-	}
+	// \brief Generated binding function for Name
+	static void BindName(Item& m, const nanodbc::result& result, short colIndex);
 
 private:
 	static std::string tableName;
 	static std::string dbType;
 	static std::unordered_set<std::string> columnNames;
 };
-
-std::unordered_map<std::string, Item::BindColumnFunction_t> Item::ColumnBindings =
-{
-	{ "Num", &Item::BindNum },
-	{ "strName", &Item::BindName }
-};
-
-std::string Item::tableName = "ITEM";
-std::string Item::dbType = "GAME";
-
-std::unordered_set<std::string> Item::columnNames = { "Num", "strName" };

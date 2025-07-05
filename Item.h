@@ -50,13 +50,13 @@ public:
 	/// \brief Generated binding function for Num
 	static void BindNum(Item& m, const nanodbc::result& result, short colIndex)
 	{
-		m.Num = result.get<int>(colIndex);
+		result.get_ref<int>(colIndex, m.Num);
 	}
 
 	/// \brief Generated binding function for Name
 	static void BindName(Item& m, const nanodbc::result& result, short colIndex)
 	{
-		m.Name = result.get<std::string>(colIndex);
+		result.get_ref<std::string>(colIndex, m.Name);
 	}
 
 private:

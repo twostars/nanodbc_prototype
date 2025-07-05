@@ -12,19 +12,28 @@ class ModelRecordSet
 {
 public:
 	/// \brief opens a connection to the model's database and queries its table using 
-	/// a SqlBuilder. Results are accessed by iterating with next() and requesting
-	/// a bound model object with get()
+	/// a SqlBuilder.
+	/// Results are accessed by iterating with next() and requesting a bound model object
+	/// with get()
 	///
 	/// \see next(), get()
 	/// \throws nanodbc::database_error
-	ModelRecordSet(SqlBuilder<T> filterObj = SqlBuilder<T>()) noexcept(false)
+	ModelRecordSet(SqlBuilder<T>& filterObj) noexcept(false)
 	{
-		conn = DatabaseConnManager::GetConnectionTo(T::DbType());
-		std::string query = filterObj.SelectString();
-		stmt = nanodbc::statement(conn, query);
-		result = nanodbc::execute(stmt);
+		open(filterObj);
+	}
 
-		Model::IndexColumnNameBindings<T>(result, bindingIndex);
+	/// \brief opens a connection to the model's database and queries its table using 
+	/// a SqlBuilder.
+	/// Results are accessed by iterating with next() and requesting a bound model object
+	/// with get()
+	///
+	/// \see next(), get()
+	/// \throws nanodbc::database_error
+	ModelRecordSet() noexcept(false)
+	{
+		SqlBuilder<T> filterObj {};
+		open(filterObj);
 	}
 
 	~ModelRecordSet()
@@ -54,6 +63,24 @@ public:
 	bool next()
 	{
 		return result.next();
+	}
+
+protected:
+	/// \brief opens a connection to the model's database and queries its table using 
+	/// a SqlBuilder.
+	/// Results are accessed by iterating with next() and requesting a bound model object
+	/// with get()
+	///
+	/// \see next(), get()
+	/// \throws nanodbc::database_error
+	void open(SqlBuilder<T>& filterObj) noexcept(false)
+	{
+		conn = DatabaseConnManager::GetConnectionTo(T::DbType());
+		std::string query = filterObj.SelectString();
+		stmt = nanodbc::statement(conn, query);
+		result = nanodbc::execute(stmt);
+
+		Model::IndexColumnNameBindings<T>(result, bindingIndex);
 	}
 
 private:

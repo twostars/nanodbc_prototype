@@ -1,0 +1,3 @@
+[submodule "doxygen-db"]
+	path = doxygen-db
+	url = git@github.com:Open-KO/doxygen-db.git

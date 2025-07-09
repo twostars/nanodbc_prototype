@@ -10,10 +10,18 @@ template <typename model>
 class SqlBuilder
 {
 public:
+	/// \brief Limits the size of the result set.  Defaults to 0 for no limit
+	uint32_t Limit = 0;
+	
 	/// \brief returns a select query string based on any configured modifiers
 	std::string SelectString()
 	{
 		std::string query = "SELECT ";
+
+		if (Limit > 0)
+		{
+			query += "TOP " + std::to_string(Limit) + " ";
+		}
 		if (selectCols.empty())
 		{
 			// fill with all supported model bindings as a default

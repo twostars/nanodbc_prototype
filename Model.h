@@ -66,7 +66,7 @@ public:
 	template <typename T>
 	static std::vector<T> BatchSelect() noexcept(false)
 	{
-		SqlBuilder<Item> filter {};
+		SqlBuilder<T> filter {};
 		return std::move(
 			BatchSelect(filter));
 	}

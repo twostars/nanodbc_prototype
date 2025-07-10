@@ -38,6 +38,18 @@ int main()
 		{
 			std::cout << results.at(ix).Number << ": " << results.at(ix).Name << "\n";
 		}
+		
+		SqlBuilder<ebenezer::Item> filter2 {};
+		filter2.SetSelectColumns({ "Num", "strName" });
+		filter2.Limit = 10;
+
+		// using an iterator
+		ModelRecordSet<ebenezer::Item> recordSet2(filter2);
+		while (recordSet2.next())
+		{
+			ebenezer::Item item = recordSet2.get();
+			std::cout << item.Number << ": " << item.Name << "\n";
+		}
 	}
 	catch (nanodbc::database_error& ex)
 	{

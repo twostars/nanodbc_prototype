@@ -249,6 +249,7 @@
     <ClCompile Include="doxygen-db\binder\BinderWebItemMallLog.ixx" />
     <ClCompile Include="doxygen-db\binder\BinderWebpageAddress.ixx" />
     <ClCompile Include="doxygen-db\binder\BinderZoneInfo.ixx" />
+    <ClCompile Include="doxygen-db\ModelUtil\ModelUtil.ixx" />
     <ClCompile Include="doxygen-db\model\ModelAccountChar.ixx" />
     <ClCompile Include="doxygen-db\model\ModelBattle.ixx" />
     <ClCompile Include="doxygen-db\model\ModelCoefficient.ixx" />

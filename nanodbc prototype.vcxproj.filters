@@ -13,17 +13,503 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="db-modules">
+      <UniqueIdentifier>{636ddf77-2d84-4f16-bd67-deced40dc768}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db-modules\Full">
+      <UniqueIdentifier>{1be5f85f-5709-46a9-86b3-1d670aadc8c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db-modules\Full\binder">
+      <UniqueIdentifier>{a59d894d-b0b6-4d36-ab70-8557d23775b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db-modules\Full\model">
+      <UniqueIdentifier>{a5a36df1-a18f-4ee6-b292-c322c560541b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db-modules\ModelUtil">
+      <UniqueIdentifier>{975aec3d-75d2-416d-9ab8-3709d3435b66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db-modules\BinderUtil">
+      <UniqueIdentifier>{841e4b24-ed40-4054-8a19-48910eefc60b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="nanodbc_prototype.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-AccountChar.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Battle.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Coefficient.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Concurrent.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-CopySerialItem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-CopyTest.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-CouponSerialList.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-CurrentUser.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Event.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-EventTrigger.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-FriendList.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-HacktoolUserLog.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-HeroUser.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Home.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Item.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ItemExchange.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ItemGroup.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ItemUpgrade.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ItemUpProbability.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KingBallotBox.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KingCandidacyNoticeBoard.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KingElectionList.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KingSystem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Knights.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsAlliance.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsCape.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsRating.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsSiegeWarfare.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsUser.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-LevelUp.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Magic.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType1.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType2.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType3.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType4.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType5.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType6.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType7.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType8.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType9.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeDefensive.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeItem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeItemGradeCode.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeItemGroup.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeItemRareCode.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeWeapon.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Monster.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterChallenge.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterChallengeSummonList.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterItem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterItemTest.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterSummonList.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Npc.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-NpcItem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-NpcMoveItem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-NpcPos.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ProgramListLog.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-RentalItem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-RentalItemList.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ServerResource.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-StartPosition.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-TbUser.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserData.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserDataSkillShortcut.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserEditor.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserEditorItem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserKnightsRank.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserPersonalRank.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserRentalItem.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserSavedMagic.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Version.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Warehouse.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-WebItemMall.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-WebItemMallLog.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-WebpageAddress.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ZoneInfo.ixx">
+      <Filter>db-modules\Full\binder</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-AccountChar.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Battle.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Coefficient.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Concurrent.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-CopySerialItem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-CopyTest.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-CouponSerialList.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-CurrentUser.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Event.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-EventTrigger.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-FriendList.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-HacktoolUserLog.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-HeroUser.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Home.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Item.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ItemExchange.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ItemGroup.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ItemUpgrade.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ItemUpProbability.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KingBallotBox.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KingCandidacyNoticeBoard.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KingElectionList.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KingSystem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Knights.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsAlliance.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsCape.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsRating.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsSiegeWarfare.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsUser.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-LevelUp.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Magic.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType1.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType2.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType3.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType4.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType5.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType6.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType7.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType8.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType9.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeDefensive.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeItem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeItemGradeCode.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeItemGroup.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeItemRareCode.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeWeapon.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Monster.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterChallenge.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterChallengeSummonList.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterItem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterItemTest.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterSummonList.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Npc.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-NpcItem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-NpcMoveItem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-NpcPos.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ProgramListLog.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-RentalItem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-RentalItemList.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ServerResource.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-StartPosition.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-TbUser.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserData.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserDataSkillShortcut.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserEditor.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserEditorItem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserKnightsRank.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserPersonalRank.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserRentalItem.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserSavedMagic.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Version.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Warehouse.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-WebItemMall.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-WebItemMallLog.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-WebpageAddress.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ZoneInfo.ixx">
+      <Filter>db-modules\Full\model</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\ModelUtil\ModelUtil.ixx">
+      <Filter>db-modules\ModelUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="doxygen-db\BinderUtil\BinderUtil.ixx">
+      <Filter>db-modules\BinderUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="DatabaseConnManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DatabaseConnManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Model.h">
@@ -35,7 +521,7 @@
     <ClInclude Include="SqlBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ItemBinder.h">
+    <ClInclude Include="Exceptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

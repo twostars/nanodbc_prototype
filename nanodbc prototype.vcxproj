@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -114,7 +114,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
@@ -135,7 +135,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -158,7 +158,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -172,165 +172,168 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="doxygen-db\binder\BinderAccountChar.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderBattle.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderCoefficient.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderConcurrent.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderCopySerialItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderCopyTest.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderCouponSerialList.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderCurrentUser.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderEvent.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderEventTrigger.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderFriendList.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderHacktoolUserLog.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderHeroUser.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderHome.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderItemExchange.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderItemGroup.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderItemUpgrade.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderItemUpProbability.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKingBallotBox.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKingCandidacyNoticeBoard.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKingElectionList.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKingSystem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKnights.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKnightsAlliance.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKnightsCape.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKnightsRating.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKnightsSiegeWarfare.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderKnightsUser.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderLevelUp.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagic.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType1.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType2.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType3.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType4.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType5.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType6.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType7.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType8.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMagicType9.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMakeDefensive.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMakeItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMakeItemGradeCode.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMakeItemGroup.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMakeItemRareCode.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMakeWeapon.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderModule.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMonster.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMonsterChallenge.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMonsterChallengeSummonList.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMonsterItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMonsterItemTest.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderMonsterSummonList.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderNpc.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderNpcItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderNpcMoveItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderNpcPos.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderProgramListLog.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderRentalItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderRentalItemList.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderServerResource.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderStartPosition.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderTbUser.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderUserData.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderUserDataSkillShortcut.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderUserEditor.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderUserEditorItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderUserKnightsRank.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderUserPersonalRank.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderUserRentalItem.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderUserSavedMagic.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderVersion.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderWarehouse.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderWebItemMall.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderWebItemMallLog.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderWebpageAddress.ixx" />
-    <ClCompile Include="doxygen-db\binder\BinderZoneInfo.ixx" />
+    <ClCompile Include="DatabaseConnManager.cpp" />
+    <ClCompile Include="doxygen-db\BinderUtil\BinderUtil.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-AccountChar.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Battle.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Coefficient.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Concurrent.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-CopySerialItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-CopyTest.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-CouponSerialList.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-CurrentUser.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Event.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-EventTrigger.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-FriendList.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-HacktoolUserLog.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-HeroUser.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Home.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Item.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ItemExchange.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ItemGroup.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ItemUpgrade.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ItemUpProbability.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KingBallotBox.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KingCandidacyNoticeBoard.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KingElectionList.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KingSystem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Knights.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsAlliance.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsCape.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsRating.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsSiegeWarfare.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-KnightsUser.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-LevelUp.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Magic.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType1.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType2.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType3.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType4.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType5.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType6.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType7.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType8.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MagicType9.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeDefensive.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeItemGradeCode.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeItemGroup.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeItemRareCode.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MakeWeapon.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Monster.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterChallenge.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterChallengeSummonList.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterItemTest.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-MonsterSummonList.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Npc.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-NpcItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-NpcMoveItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-NpcPos.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ProgramListLog.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-RentalItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-RentalItemList.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ServerResource.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-StartPosition.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-TbUser.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserData.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserDataSkillShortcut.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserEditor.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserEditorItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserKnightsRank.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserPersonalRank.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserRentalItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-UserSavedMagic.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Version.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-Warehouse.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-WebItemMall.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-WebItemMallLog.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-WebpageAddress.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder-ZoneInfo.ixx" />
+    <ClCompile Include="doxygen-db\Full\binder\FullBinder.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-AccountChar.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Battle.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Coefficient.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Concurrent.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-CopySerialItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-CopyTest.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-CouponSerialList.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-CurrentUser.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Event.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-EventTrigger.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-FriendList.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-HacktoolUserLog.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-HeroUser.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Home.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Item.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ItemExchange.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ItemGroup.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ItemUpgrade.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ItemUpProbability.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KingBallotBox.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KingCandidacyNoticeBoard.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KingElectionList.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KingSystem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Knights.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsAlliance.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsCape.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsRating.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsSiegeWarfare.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-KnightsUser.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-LevelUp.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Magic.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType1.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType2.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType3.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType4.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType5.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType6.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType7.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType8.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MagicType9.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeDefensive.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeItemGradeCode.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeItemGroup.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeItemRareCode.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MakeWeapon.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Monster.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterChallenge.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterChallengeSummonList.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterItemTest.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-MonsterSummonList.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Npc.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-NpcItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-NpcMoveItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-NpcPos.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ProgramListLog.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-RentalItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-RentalItemList.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ServerResource.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-StartPosition.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-TbUser.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserData.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserDataSkillShortcut.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserEditor.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserEditorItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserKnightsRank.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserPersonalRank.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserRentalItem.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-UserSavedMagic.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Version.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-Warehouse.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-WebItemMall.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-WebItemMallLog.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-WebpageAddress.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel-ZoneInfo.ixx" />
+    <ClCompile Include="doxygen-db\Full\model\FullModel.ixx" />
     <ClCompile Include="doxygen-db\ModelUtil\ModelUtil.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelAccountChar.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelBattle.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelCoefficient.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelConcurrent.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelCopySerialItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelCopyTest.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelCouponSerialList.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelCurrentUser.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelEvent.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelEventTrigger.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelFriendList.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelHacktoolUserLog.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelHeroUser.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelHome.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelItemExchange.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelItemGroup.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelItemUpgrade.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelItemUpProbability.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKingBallotBox.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKingCandidacyNoticeBoard.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKingElectionList.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKingSystem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKnights.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKnightsAlliance.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKnightsCape.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKnightsRating.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKnightsSiegeWarfare.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelKnightsUser.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelLevelUp.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagic.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType1.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType2.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType3.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType4.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType5.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType6.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType7.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType8.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMagicType9.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMakeDefensive.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMakeItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMakeItemGradeCode.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMakeItemGroup.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMakeItemRareCode.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMakeWeapon.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelModule.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMonster.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMonsterChallenge.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMonsterChallengeSummonList.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMonsterItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMonsterItemTest.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelMonsterSummonList.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelNpc.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelNpcItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelNpcMoveItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelNpcPos.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelProgramListLog.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelRentalItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelRentalItemList.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelServerResource.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelStartPosition.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelTbUser.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelUserData.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelUserDataSkillShortcut.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelUserEditor.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelUserEditorItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelUserKnightsRank.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelUserPersonalRank.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelUserRentalItem.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelUserSavedMagic.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelVersion.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelWarehouse.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelWebItemMall.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelWebItemMallLog.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelWebpageAddress.ixx" />
-    <ClCompile Include="doxygen-db\model\ModelZoneInfo.ixx" />
     <ClCompile Include="nanodbc_prototype.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DatabaseConnManager.h" />
+    <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="ModelRecordSet.h" />
     <ClInclude Include="SqlBuilder.h" />

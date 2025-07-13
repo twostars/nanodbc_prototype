@@ -1,4 +1,4 @@
 [submodule "doxygen-db"]
 	path = doxygen-db
-	url = git@github.com:Open-KO/OpenKO-db-modules.git
+	url = https://github.com/Open-KO/OpenKO-db-modules.git
 	branch = main

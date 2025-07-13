@@ -2,44 +2,68 @@
 #include <string>
 
 #include "DatabaseConnManager.h"
-#include "Item.h"
 #include "ModelRecordSet.h"
 #include "SqlBuilder.h"
 #include "nanodbc/nanodbc.h"
 
+import FullModel;
+import FullBinder;
+
+namespace model = full_model;
+using namespace db;
+
 int main()
 {
+	struct DbHelper
+	{
+		DbHelper() { DatabaseConnManager::Create(); }
+		~DbHelper() { DatabaseConnManager::Destroy(); }
+	};
+	DbHelper helper;
+
 	try
 	{
-		std::string dsn = "KN_online";
-		std::string user = "knight";
-		std::string password = "knight";
-		DatabaseConnManager::SetGameDsn(dsn, user, password);
-
-		// we'll have a generated method that wraps all model bindings for a single
-		// call on application startup
-		Item::InitBindings();
-
-		SqlBuilder<Item> filter = SqlBuilder<Item>();
+		DatabaseConnManager::SetDatasourceConfig(
+			modelUtil::DbType::GAME,
+			"KN_online",
+			"knight",
+			"knight");
+		
+		SqlBuilder<model::Item> filter {};
 		filter.SetSelectColumns({ "Num", "strName" });
+		filter.Limit = 10;
 
 		// using an iterator
-		ModelRecordSet<Item> recordSet = ModelRecordSet<Item>(filter);
-		int i = 0;
-		while (recordSet.next() && i < 10)
+		ModelRecordSet<model::Item> recordSet;
+		recordSet.open(filter);
+
+		while (recordSet.next())
 		{
-			Item item = recordSet.get();
-			std::cout << item.Num << ": " << item.Name << "\n";
-			i++;
+			model::Item item = recordSet.get();
+			std::cout << item.ID << ": " << item.Name << "\n";
 		}
 
 		// loading results in a single query; currently this functions the same way as the iterator above
 		// need to look more at nanodbc library functions to see if there's a way to fetch everything
 		// in one database trip or not
-		std::vector<Item> results = Model::BatchSelect<Item>(filter);
-		for (std::size_t ix = 0; ix < results.size() && ix < 10; ix++)
+		std::vector<model::Item> results = Model::BatchSelect<model::Item>(filter);
+		for (std::size_t ix = 0; ix < results.size(); ix++)
 		{
-			std::cout << results.at(ix).Num << ": " << results.at(ix).Name << "\n";
+			std::cout << results.at(ix).ID << ": " << results.at(ix).Name << "\n";
+		}
+		
+		SqlBuilder<model::Item> filter2 {};
+		filter2.SetSelectColumns({ "Num", "strName" });
+		filter2.Limit = 10;
+
+		// using an iterator
+		ModelRecordSet<model::Item> recordSet2;
+		recordSet2.open(filter2);
+
+		while (recordSet2.next())
+		{
+			model::Item item = recordSet2.get();
+			std::cout << item.ID << ": " << item.Name << "\n";
 		}
 	}
 	catch (nanodbc::database_error& ex)

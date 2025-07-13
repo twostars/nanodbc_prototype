@@ -1,6 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nanodbc prototype", "nanodbc prototype.vcxproj", "{6D2E404A-6371-4C9B-98A8-4439B96D0CBD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182} = {1D12C57B-D929-43A4-A6D6-B9DAFD338182}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nanodbc", "nanodbc\nanodbc.vcxproj", "{1D12C57B-D929-43A4-A6D6-B9DAFD338182}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +26,19 @@ Global
 		{6D2E404A-6371-4C9B-98A8-4439B96D0CBD}.Release|Win32.Build.0 = Release|Win32
 		{6D2E404A-6371-4C9B-98A8-4439B96D0CBD}.Release|x64.ActiveCfg = Release|x64
 		{6D2E404A-6371-4C9B-98A8-4439B96D0CBD}.Release|x64.Build.0 = Release|x64
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182}.Debug|Win32.Build.0 = Debug|Win32
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182}.Debug|x64.ActiveCfg = Debug|x64
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182}.Debug|x64.Build.0 = Debug|x64
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182}.Release|Win32.ActiveCfg = Release|Win32
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182}.Release|Win32.Build.0 = Release|Win32
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182}.Release|x64.ActiveCfg = Release|x64
+		{1D12C57B-D929-43A4-A6D6-B9DAFD338182}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF510999-197E-424C-991B-922112DCF5F2}
 	EndGlobalSection
 EndGlobal
